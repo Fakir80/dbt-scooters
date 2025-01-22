@@ -11,3 +11,6 @@ seeds:
 
   - name: "age_groups"
     description: "Age groups to split users for analysis"
+
+  - name: "add_first_name_sex"
+    description: "additional name_sex glossary"

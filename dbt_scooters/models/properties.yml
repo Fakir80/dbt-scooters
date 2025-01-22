@@ -86,3 +86,9 @@ models:
 
   - name: "trips_age_group"
     description: "Overall trips statistics by user age group"
+
+  - name: "first_name_sex"
+    description: "Unique name_sex glossary"
+
+  - name: "users_full"
+    description: "Users enriched with sex"
