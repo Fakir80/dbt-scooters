@@ -16,6 +16,10 @@ sources:
             count: 3650
             period: "day"
         columns:
+            - name: "id"
+              data_tests:
+                - not_null
+                - unique
             - name: "user_id"
               description: "User identifier"
               data_tests:
@@ -24,11 +28,26 @@ sources:
                     name: "every_trip_has_user"
                     to: "source('scooters_raw', 'users')"
                     field: "id"
+            - name: "scooter_hw_id"
+              description: "Scooter model identifier"
+              data_tests:
+                - not_null
+                - relationships:
+                    name: "every_trip_has_scooter_id"
+                    to: "ref('scooters')"
+                    field: "hardware_id"
+                    config:
+                      severity: "warn"
 
 
       - name: "users"
         description: "Users of scooter service"
         columns:
+          - name: "id"
+            description: "User identifier"
+            data_tests:
+              - not_null
+              - unique
           - name: "sex"
             description: "User gender"
             data_tests:
@@ -38,9 +57,27 @@ sources:
                   config:
                     severity: "warn"
 
-
       - name: "events"
         description: "Raw user events with duplicates"
+        columns:
+          - name: "user_id"
+            description: "User identifier"
+            data_tests:
+              - not_null
+              - relationships:
+                    name: "every_event_has_user"
+                    to: "source('scooters_raw', 'users')"
+                    field: "id"
+          - name: "type_id"
+            description: "Event type identifier"
+            data_tests:
+              - not_null
+              - relationships:
+                  name: "every_event_has_type"
+                  to: "ref('event_types')"
+                  field: "type_id"
+                  config:
+                    severity: "warn"
 
 models:
   - name: "trips_prep"
@@ -56,12 +93,19 @@ models:
     config:
       indexes:
         - columns: [ "date" ]
+    columns:
+      - name: "date"
+        description: "Trips date"
+        data-tests:
+          - unique
 
   - name: "trips_age_daily"
     description: "Daily trips statistics by user age"
-    data-tests:
+    data_tests:
       - unique:
-        column_name: "date::text || age::text"
+          column_name: "date::text || age::text"
+      - unique_key:
+          columns: [ "date", "age" ]
 
   - name: "trips_age_daily_stat"
     description: "Aggregation of daily trips statistics by user age"

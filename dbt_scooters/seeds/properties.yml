@@ -3,14 +3,54 @@ seeds:
     description: "Scooter models info and statistics"
     config:
       delimiter: ","
+    data_tests:
+      - unique_key:
+          columns: [ "company", "model", "hardware_id" ]
+    columns:
+      - name: "company"
+        description: "Scooter company model name"
+      - name: "model"
+        description: "Scooter model name"
+        data_tests: [ "unique_not_null" ]
+      - name: "hardware_id"
+        description: "scooter model id"
+        data_tests: [ "unique_not_null" ]
+      - name: "scooters"
+        description: "Count of scooters"
 
   - name: "event_types"
     description: "Meaningful types of mobile app events"
     config:
       delimiter: ","
+    columns:
+      - name: "type_id"
+        description: "id type of event"
+        data_tests: [ "unique_not_null" ]
+      - name: "type"
+        description: "name of type events"
+        data_tests: [ "unique_not_null" ]
 
   - name: "age_groups"
     description: "Age groups to split users for analysis"
+    columns:
+      - name: "group"
+        description: "Age group name for report"
+        data_tests: [ "unique_not_null" ]
+      - name: "age_start"
+        description: "Start age of group"
+        data_tests: [ "unique_not_null" ]
+      - name: "age_end"
+        description: "End age of group"
+        data_tests: [ "unique_not_null" ]
 
   - name: "add_first_name_sex"
     description: "additional name_sex glossary"
+    columns:
+      - name: "first_name"
+        description: "First name of user"
+        data_tests: [ "unique_not_null" ]
+      - name: "sex"
+        description: "user gender"
+        data_tests:
+          - accepted_values:
+              values: [ "M", "F" ]
