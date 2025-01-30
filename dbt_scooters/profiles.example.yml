@@ -1,0 +1,12 @@
+dbt_scooters:
+  outputs:
+    dev:
+      dbname: dev_3lcu
+      host: dpg-cu4f49rtq21c73cqam00-a.oregon-postgres.render.com
+      pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: 5432
+      schema: dbt
+      threads: 4
+      type: postgres
+      user: admin
+  target: dev

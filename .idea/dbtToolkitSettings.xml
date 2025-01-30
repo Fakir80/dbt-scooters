@@ -43,12 +43,22 @@
             <Object />
           </value>
         </entry>
+        <entry key="on-run-end">
+          <value>
+            <Object />
+          </value>
+        </entry>
         <entry key="profile">
           <value>
             <Object />
           </value>
         </entry>
         <entry key="seed-paths">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="seeds">
           <value>
             <Object />
           </value>
