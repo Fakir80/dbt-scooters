@@ -1,7 +1,7 @@
 dbt_scooters:
   outputs:
     dev:
-      dbname: dev_3lcu
+      dbname: dev_gom1
       host: dpg-cve3bdt2ng1s73cctvfg-a.frankfurt-postgres.render.com
       pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
       port: 5432
