@@ -197,3 +197,14 @@ models:
         incrementality:
           start_date: "2023-06-01"
           days_max: 60
+
+  - name: "sex_age_pivot"
+    description: "Trips per age pivoted by sex"
+    data_tests:
+      - unique_key:
+          columns: [ "age" ]
+    columns:
+      - name: "age"
+        description: "Numerical age of user"
+        data_tests:
+          - "dbt_utils.not_constant"
