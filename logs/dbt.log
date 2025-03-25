@@ -34537,3 +34537,964 @@ grant usage on schema finance to finance;
 [0m19:15:00.604632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215D13F1D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215D118A7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000215CCCB3F50>]}
 [0m19:15:00.605630 [debug] [MainThread]: Flushing usage events
 [0m19:15:01.309685 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:27:50.953117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171C9625AF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CBA63FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CB88C080>]}
+
+
+============================== 19:27:50.959636 | d9bdd35f-9e62-40bb-af43-fb101695aa4e ==============================
+[0m19:27:50.959636 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:27:50.960635 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps --add-package mjirv/dbt_product_analytics@0.1.0', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:27:51.163338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd9bdd35f-9e62-40bb-af43-fb101695aa4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CC4C6600>]}
+[0m19:27:51.200987 [info ] [MainThread]: Added new package mjirv/dbt_product_analytics@0.1.0 to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters/dependencies.yml
+[0m19:27:51.207796 [debug] [MainThread]: Set downloads directory='C:\Users\C523~1\AppData\Local\Temp\dbt-downloads-1ok4legc'
+[0m19:27:51.208802 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:27:51.511773 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:27:51.514007 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:27:51.637738 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:27:51.646024 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m19:27:51.774649 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m19:27:51.776701 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m19:27:51.777663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd9bdd35f-9e62-40bb-af43-fb101695aa4e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CC699EB0>]}
+[0m19:27:51.781971 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json
+[0m19:27:52.104663 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json 200
+[0m19:27:52.105673 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m19:27:52.222097 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m19:27:52.226108 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+[0m19:27:52.233936 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 329, in reduce
+    start = end = self._try_combine_exact(self.start, other.start)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 259, in _try_combine_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\main.py", line 455, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 219, in run
+    self.lock()
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+[0m19:27:52.236956 [debug] [MainThread]: Command `dbt deps` failed at 19:27:52.235946 after 1.64 seconds
+[0m19:27:52.236956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171C9625AF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CC501430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171CC502EA0>]}
+[0m19:27:52.237953 [debug] [MainThread]: Flushing usage events
+[0m19:27:52.935107 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:29:21.571773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D622504BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D62471C290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D62471D880>]}
+
+
+============================== 19:29:21.578402 | ce468ea9-0844-4880-8a0c-ef1136f374e8 ==============================
+[0m19:29:21.578402 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:29:21.579367 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt deps', 'send_anonymous_usage_stats': 'True'}
+[0m19:29:21.786678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ce468ea9-0844-4880-8a0c-ef1136f374e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D625355400>]}
+[0m19:29:21.826668 [debug] [MainThread]: Set downloads directory='C:\Users\C523~1\AppData\Local\Temp\dbt-downloads-mgyx_11p'
+[0m19:29:21.827669 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:29:22.135709 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:29:22.136708 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:29:22.262040 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:29:22.271943 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m19:29:22.381423 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m19:29:22.383631 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m19:29:22.384640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ce468ea9-0844-4880-8a0c-ef1136f374e8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D625587350>]}
+[0m19:29:22.388638 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json
+[0m19:29:22.622886 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json 200
+[0m19:29:22.624425 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m19:29:22.764298 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m19:29:22.768305 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+[0m19:29:22.774563 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 329, in reduce
+    start = end = self._try_combine_exact(self.start, other.start)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 259, in _try_combine_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\main.py", line 455, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 219, in run
+    self.lock()
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+[0m19:29:22.778522 [debug] [MainThread]: Command `dbt deps` failed at 19:29:22.777523 after 1.57 seconds
+[0m19:29:22.779523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6252CDEE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D625538140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6255DDEB0>]}
+[0m19:29:22.779523 [debug] [MainThread]: Flushing usage events
+[0m19:29:23.540407 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:29:51.577461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAFA79730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAC2B8D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAD7A2030>]}
+
+
+============================== 19:29:51.584245 | d87726f6-f416-438e-9888-1dfffe5b891a ==============================
+[0m19:29:51.584245 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:29:51.585254 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:29:51.792959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd87726f6-f416-438e-9888-1dfffe5b891a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAF453C80>]}
+[0m19:29:51.834384 [debug] [MainThread]: Set downloads directory='C:\Users\C523~1\AppData\Local\Temp\dbt-downloads-j0o2dn_7'
+[0m19:29:51.835396 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:29:51.902840 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:29:51.902840 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+[0m19:29:51.909413 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 329, in reduce
+    start = end = self._try_combine_exact(self.start, other.start)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 259, in _try_combine_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt_common\semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\cli\main.py", line 455, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 219, in run
+    self.lock()
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Lib\site-packages\dbt\deps\registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.3.0', '=0.8.6']
+
+[0m19:29:51.913074 [debug] [MainThread]: Command `dbt deps` failed at 19:29:51.911877 after 0.57 seconds
+[0m19:29:51.913074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAFB5D700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAFB8D040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023FAFB8C0E0>]}
+[0m19:29:51.915613 [debug] [MainThread]: Flushing usage events
+[0m19:29:52.526584 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:30:43.572438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5478830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD599BC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD529B470>]}
+
+
+============================== 19:30:43.578445 | 10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae ==============================
+[0m19:30:43.578445 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:30:43.579444 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:30:43.782712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD506F5F0>]}
+[0m19:30:43.822523 [debug] [MainThread]: Set downloads directory='C:\Users\C523~1\AppData\Local\Temp\dbt-downloads-18mb6q_u'
+[0m19:30:43.824070 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:30:44.077702 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:30:44.079704 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:30:44.196129 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:30:44.204404 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m19:30:44.319426 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m19:30:44.321690 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m19:30:44.322654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5CE0050>]}
+[0m19:30:44.328244 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json
+[0m19:30:44.541249 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/mjirv/dbt_product_analytics.json 200
+[0m19:30:44.542485 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m19:30:44.664514 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m19:30:44.682624 [info ] [MainThread]: Updating lock file in file path: C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters/package-lock.yml
+[0m19:30:44.844449 [debug] [MainThread]: Set downloads directory='C:\Users\C523~1\AppData\Local\Temp\dbt-downloads-9q1vvuzb'
+[0m19:30:44.854334 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:30:45.431030 [info ] [MainThread]: Installed from version 1.3.0
+[0m19:30:45.432324 [info ] [MainThread]: Up to date!
+[0m19:30:45.433322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5DD83B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5CE3380>]}
+[0m19:30:45.434319 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m19:30:46.274343 [info ] [MainThread]: Installed from version 0.10.4
+[0m19:30:46.275297 [info ] [MainThread]: Up to date!
+[0m19:30:46.276340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD61F77D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD61F7920>]}
+[0m19:30:46.277299 [info ] [MainThread]: Installing mjirv/dbt_product_analytics
+[0m19:30:46.619411 [info ] [MainThread]: Installed from version 0.3.1
+[0m19:30:46.620412 [info ] [MainThread]: Up to date!
+[0m19:30:46.621589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5D236B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5D23620>]}
+[0m19:30:46.622593 [info ] [MainThread]: Installing calogica/dbt_date
+[0m19:30:46.886609 [info ] [MainThread]: Installed from version 0.10.1
+[0m19:30:46.887607 [info ] [MainThread]: Up to date!
+[0m19:30:46.888608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '10147b8c-8fe8-4f1d-8ef9-85e363e1b8ae', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD61F41D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD61F41A0>]}
+[0m19:30:46.892824 [debug] [MainThread]: Command `dbt deps` succeeded at 19:30:46.892824 after 3.56 seconds
+[0m19:30:46.894334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5353920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5CE3380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5E6E5A0>]}
+[0m19:30:46.895343 [debug] [MainThread]: Flushing usage events
+[0m19:30:47.703390 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:36:38.087784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FC0AF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBCDA540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBCDBFE0>]}
+
+
+============================== 19:36:38.093092 | d96f522a-966a-4001-a916-e96246b1a80d ==============================
+[0m19:36:38.093092 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:36:38.095056 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt show -s events_stream', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:36:38.403073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FC223770>]}
+[0m19:36:38.499181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FC3447D0>]}
+[0m19:36:38.537019 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:36:38.935547 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m19:36:39.234748 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m19:36:39.235750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBD3CFE0>]}
+[0m19:36:42.014350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'experimental_parser', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FD94FDA0>]}
+[0m19:36:43.729394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FDFA80E0>]}
+[0m19:36:43.962406 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\manifest.json
+[0m19:36:43.970436 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\semantic_manifest.json
+[0m19:36:43.983087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FC40ED50>]}
+[0m19:36:43.984082 [info ] [MainThread]: Found 23 models, 33 data tests, 4 seeds, 1 operation, 3 sources, 1 exposure, 844 macros
+[0m19:36:43.985083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FD9B3C80>]}
+[0m19:36:43.988113 [info ] [MainThread]: 
+[0m19:36:43.989082 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:36:43.990078 [info ] [MainThread]: 
+[0m19:36:43.991409 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:36:44.001664 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_gom1_dbt'
+[0m19:36:44.013529 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_gom1_finance'
+[0m19:36:44.151168 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_dbt"
+[0m19:36:44.151168 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_finance"
+[0m19:36:44.152445 [debug] [ThreadPool]: On list_dev_gom1_dbt: BEGIN
+[0m19:36:44.153440 [debug] [ThreadPool]: On list_dev_gom1_finance: BEGIN
+[0m19:36:44.153440 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:36:44.154475 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:36:46.280292 [debug] [ThreadPool]: SQL status: BEGIN in 2.125 seconds
+[0m19:36:46.280292 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_finance"
+[0m19:36:46.281293 [debug] [ThreadPool]: On list_dev_gom1_finance: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_gom1_finance"} */
+select
+      'dev_gom1' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'finance'
+    union all
+    select
+      'dev_gom1' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'finance'
+    union all
+    select
+      'dev_gom1' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'finance'
+  
+[0m19:36:46.371858 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.090 seconds
+[0m19:36:46.373853 [debug] [ThreadPool]: On list_dev_gom1_finance: ROLLBACK
+[0m19:36:46.446821 [debug] [ThreadPool]: On list_dev_gom1_finance: Close
+[0m19:36:47.191116 [debug] [ThreadPool]: SQL status: BEGIN in 3.038 seconds
+[0m19:36:47.192361 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_dbt"
+[0m19:36:47.193324 [debug] [ThreadPool]: On list_dev_gom1_dbt: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_gom1_dbt"} */
+select
+      'dev_gom1' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_gom1' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_gom1' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m19:36:47.280921 [debug] [ThreadPool]: SQL status: SELECT 25 in 0.087 seconds
+[0m19:36:47.283148 [debug] [ThreadPool]: On list_dev_gom1_dbt: ROLLBACK
+[0m19:36:47.361307 [debug] [ThreadPool]: On list_dev_gom1_dbt: Close
+[0m19:36:47.374367 [debug] [MainThread]: Using postgres connection "master"
+[0m19:36:47.374367 [debug] [MainThread]: On master: BEGIN
+[0m19:36:47.375365 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:36:48.556061 [debug] [MainThread]: SQL status: BEGIN in 1.181 seconds
+[0m19:36:48.557019 [debug] [MainThread]: Using postgres connection "master"
+[0m19:36:48.557019 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:36:48.648224 [debug] [MainThread]: SQL status: SELECT 5 in 0.090 seconds
+[0m19:36:48.651185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd96f522a-966a-4001-a916-e96246b1a80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FDCC1D30>]}
+[0m19:36:48.651185 [debug] [MainThread]: On master: ROLLBACK
+[0m19:36:48.728196 [debug] [MainThread]: On master: Close
+[0m19:36:48.732347 [debug] [Thread-1 (]: Began running node model.dbt_scooters.events_stream
+[0m19:36:48.733383 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_scooters.events_stream'
+[0m19:36:48.734343 [debug] [Thread-1 (]: Began compiling node model.dbt_scooters.events_stream
+[0m19:36:48.743191 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_scooters.events_stream"
+[0m19:36:48.745234 [debug] [Thread-1 (]: Began executing node model.dbt_scooters.events_stream
+[0m19:36:48.756048 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.events_stream"
+[0m19:36:48.756048 [debug] [Thread-1 (]: On model.dbt_scooters.events_stream: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.events_stream"} */
+
+  
+  
+  select type as event_type, user_id as user_id, date("timestamp") as event_date
+  from "dev_gom1"."dbt"."events_full"
+  where 1 = 1
+  
+  
+
+  
+  limit 5
+
+[0m19:36:48.757047 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:36:49.901185 [debug] [Thread-1 (]: SQL status: SELECT 5 in 1.145 seconds
+[0m19:36:49.904424 [debug] [Thread-1 (]: On model.dbt_scooters.events_stream: Close
+[0m19:36:49.906428 [debug] [Thread-1 (]: Finished running node model.dbt_scooters.events_stream
+[0m19:36:49.907386 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:36:49.908428 [debug] [MainThread]: Connection 'list_dev_gom1_dbt' was properly closed.
+[0m19:36:49.908428 [debug] [MainThread]: Connection 'list_dev_gom1_finance' was properly closed.
+[0m19:36:49.909385 [debug] [MainThread]: Connection 'model.dbt_scooters.events_stream' was properly closed.
+[0m19:36:49.910385 [debug] [MainThread]: Command end result
+[0m19:36:49.970426 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\manifest.json
+[0m19:36:49.973224 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\semantic_manifest.json
+[0m19:36:49.981586 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\run_results.json
+[0m19:36:49.981586 [info ] [MainThread]: Previewing node 'events_stream':
+| event_type   | user_id | event_date |
+| ------------ | ------- | ---------- |
+| start_search |    1434 | 2023-08-01 |
+| book_scooter |      10 | 2023-08-10 |
+| book_scooter |    1571 | 2023-08-17 |
+| start_search |     908 | 2023-08-28 |
+| book_scooter |     694 | 2023-08-18 |
+
+[0m19:36:49.983490 [debug] [MainThread]: Command `dbt show` succeeded at 19:36:49.983490 after 12.25 seconds
+[0m19:36:49.984487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBBE40B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBBE4320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213FBBE4740>]}
+[0m19:36:49.984487 [debug] [MainThread]: Flushing usage events
+[0m19:36:50.710247 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:40:32.996444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83424F7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D831680B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D834BB4D40>]}
+
+
+============================== 19:40:33.001955 | 20910718-6a7a-490b-a4b8-925731f1e2ce ==============================
+[0m19:40:33.001955 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:40:33.003242 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt build -s book_scooter_retention', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:40:33.310599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8350667E0>]}
+[0m19:40:33.409636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D831367380>]}
+[0m19:40:33.410636 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:40:33.800827 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m19:40:34.301730 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m19:40:34.302734 [debug] [MainThread]: Partial parsing: added file: dbt_scooters://models\book_scooter_retention.sql
+[0m19:40:34.304734 [debug] [MainThread]: Partial parsing: updated file: dbt_scooters://models\properties.yml
+[0m19:40:34.948674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8354D9AF0>]}
+[0m19:40:35.194623 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\manifest.json
+[0m19:40:35.200627 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\semantic_manifest.json
+[0m19:40:35.272032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8365D3C50>]}
+[0m19:40:35.273045 [info ] [MainThread]: Found 24 models, 33 data tests, 4 seeds, 1 operation, 3 sources, 1 exposure, 844 macros
+[0m19:40:35.278040 [info ] [MainThread]: 
+[0m19:40:35.279043 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:40:35.280043 [info ] [MainThread]: 
+[0m19:40:35.282047 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:40:35.284039 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_gom1'
+[0m19:40:35.488482 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1"
+[0m19:40:35.488482 [debug] [ThreadPool]: On list_dev_gom1: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_gom1"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:40:35.489479 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:36.799392 [debug] [ThreadPool]: SQL status: SELECT 19 in 1.310 seconds
+[0m19:40:36.801394 [debug] [ThreadPool]: On list_dev_gom1: Close
+[0m19:40:36.808604 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_gom1_dbt'
+[0m19:40:36.816497 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dev_gom1_finance'
+[0m19:40:36.817499 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_dbt"
+[0m19:40:36.819499 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_finance"
+[0m19:40:36.820495 [debug] [ThreadPool]: On list_dev_gom1_dbt: BEGIN
+[0m19:40:36.820495 [debug] [ThreadPool]: On list_dev_gom1_finance: BEGIN
+[0m19:40:36.822006 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:36.822006 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:40:37.966178 [debug] [ThreadPool]: SQL status: BEGIN in 1.144 seconds
+[0m19:40:37.967148 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_dbt"
+[0m19:40:37.967148 [debug] [ThreadPool]: On list_dev_gom1_dbt: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_gom1_dbt"} */
+select
+      'dev_gom1' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_gom1' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'dev_gom1' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt'
+  
+[0m19:40:38.061225 [debug] [ThreadPool]: SQL status: SELECT 25 in 0.093 seconds
+[0m19:40:38.063439 [debug] [ThreadPool]: On list_dev_gom1_dbt: ROLLBACK
+[0m19:40:38.151466 [debug] [ThreadPool]: On list_dev_gom1_dbt: Close
+[0m19:40:39.945018 [debug] [ThreadPool]: SQL status: BEGIN in 3.123 seconds
+[0m19:40:39.946016 [debug] [ThreadPool]: Using postgres connection "list_dev_gom1_finance"
+[0m19:40:39.947017 [debug] [ThreadPool]: On list_dev_gom1_finance: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "list_dev_gom1_finance"} */
+select
+      'dev_gom1' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'finance'
+    union all
+    select
+      'dev_gom1' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'finance'
+    union all
+    select
+      'dev_gom1' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'finance'
+  
+[0m19:40:40.024653 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.077 seconds
+[0m19:40:40.026655 [debug] [ThreadPool]: On list_dev_gom1_finance: ROLLBACK
+[0m19:40:40.098408 [debug] [ThreadPool]: On list_dev_gom1_finance: Close
+[0m19:40:40.108577 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:40.108577 [debug] [MainThread]: On master: BEGIN
+[0m19:40:40.109605 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:40:41.212361 [debug] [MainThread]: SQL status: BEGIN in 1.103 seconds
+[0m19:40:41.213370 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:41.214372 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:40:41.298516 [debug] [MainThread]: SQL status: SELECT 5 in 0.082 seconds
+[0m19:40:41.300562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D836A72090>]}
+[0m19:40:41.300562 [debug] [MainThread]: On master: ROLLBACK
+[0m19:40:41.370287 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:41.371579 [debug] [MainThread]: On master: BEGIN
+[0m19:40:41.510495 [debug] [MainThread]: SQL status: BEGIN in 0.138 seconds
+[0m19:40:41.510495 [debug] [MainThread]: On master: COMMIT
+[0m19:40:41.512224 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:41.512224 [debug] [MainThread]: On master: COMMIT
+[0m19:40:41.580385 [debug] [MainThread]: SQL status: COMMIT in 0.068 seconds
+[0m19:40:41.581619 [debug] [MainThread]: On master: Close
+[0m19:40:41.586615 [debug] [Thread-1 (]: Began running node model.dbt_scooters.book_scooter_retention
+[0m19:40:41.587650 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt.book_scooter_retention ........................ [RUN]
+[0m19:40:41.588619 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_scooters.book_scooter_retention'
+[0m19:40:41.589654 [debug] [Thread-1 (]: Began compiling node model.dbt_scooters.book_scooter_retention
+[0m19:40:41.614254 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_scooters.book_scooter_retention"
+[0m19:40:41.658555 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_scooters.book_scooter_retention"
+[0m19:40:41.660517 [debug] [Thread-1 (]: Began executing node model.dbt_scooters.book_scooter_retention
+[0m19:40:41.719563 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_scooters.book_scooter_retention"
+[0m19:40:41.720552 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:41.722272 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: BEGIN
+[0m19:40:41.723283 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:40:43.718322 [debug] [Thread-1 (]: SQL status: BEGIN in 1.995 seconds
+[0m19:40:43.719329 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:43.719329 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.book_scooter_retention"} */
+
+  
+    
+
+  create  table "dev_gom1"."dbt"."book_scooter_retention__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+  
+
+  
+
+  
+  
+  with  __dbt__cte__events_stream as (
+
+  select type as event_type, user_id as user_id, date("timestamp") as event_date
+  from "dev_gom1"."dbt"."events_full"
+  where 1 = 1
+  
+  
+
+), event_stream as (  select * from  __dbt__cte__events_stream
+    
+    
+    
+   )
+
+  , first_event_users as (
+    select
+      user_id
+      
+      , min(event_date) as first_event_date
+    from event_stream
+    group by 1 
+  )
+
+  , first_events as (
+    select 
+    count(*) as unique_users_total
+    from first_event_users
+    
+  )
+
+  
+  , secondary_events_0 as (
+    select 0 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (0))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_1 as (
+    select 1 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (1))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_7 as (
+    select 7 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (7))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_14 as (
+    select 14 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (14))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_30 as (
+    select 30 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (30))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_60 as (
+    select 60 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (60))
+
+
+
+    group by period 
+  )
+  
+  , secondary_events_120 as (
+    select 120 as period,
+    
+    count(distinct event_stream.user_id) as unique_users
+    from event_stream
+    inner join first_event_users
+      on event_stream.user_id = first_event_users.user_id
+      
+    where event_type = 'book_scooter'
+    and event_date >= 
+
+    first_event_date + ((interval '1 day') * (120))
+
+
+
+    group by period 
+  )
+  
+
+  , final as (
+    select 
+      period, 
+      
+      unique_users,
+      1.0 * unique_users / unique_users_total as pct_users
+    from first_events
+    left join (
+      
+        select * from secondary_events_0
+        
+          union all
+        
+      
+        select * from secondary_events_1
+        
+          union all
+        
+      
+        select * from secondary_events_7
+        
+          union all
+        
+      
+        select * from secondary_events_14
+        
+          union all
+        
+      
+        select * from secondary_events_30
+        
+          union all
+        
+      
+        select * from secondary_events_60
+        
+          union all
+        
+      
+        select * from secondary_events_120
+        
+      
+    ) secondary_events on  1 = 1
+    
+  )
+
+  select * from final
+
+  );
+  
+[0m19:40:56.057660 [debug] [Thread-1 (]: SQL status: SELECT 6 in 12.337 seconds
+[0m19:40:56.065435 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:56.066433 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.book_scooter_retention"} */
+alter table "dev_gom1"."dbt"."book_scooter_retention__dbt_tmp" rename to "book_scooter_retention"
+[0m19:40:56.136342 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.069 seconds
+[0m19:40:56.165155 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:56.165155 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.book_scooter_retention"} */
+
+    
+  
+  comment on table "dev_gom1"."dbt"."book_scooter_retention" is $dbt_comment_literal_block$Retention analysis which tells how many people started search for scooter and finally booked it on or after 1, 7, 14 days (or weeks, months, years), etc
+$dbt_comment_literal_block$;
+
+  
+[0m19:40:56.235274 [debug] [Thread-1 (]: SQL status: COMMENT in 0.069 seconds
+[0m19:40:56.236274 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: COMMIT
+[0m19:40:56.237273 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:56.237273 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: COMMIT
+[0m19:40:56.308335 [debug] [Thread-1 (]: SQL status: COMMIT in 0.070 seconds
+[0m19:40:56.318561 [debug] [Thread-1 (]: Applying DROP to: "dev_gom1"."dbt"."book_scooter_retention__dbt_backup"
+[0m19:40:56.324299 [debug] [Thread-1 (]: Using postgres connection "model.dbt_scooters.book_scooter_retention"
+[0m19:40:56.325298 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "node_id": "model.dbt_scooters.book_scooter_retention"} */
+drop table if exists "dev_gom1"."dbt"."book_scooter_retention__dbt_backup" cascade
+[0m19:40:56.394530 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.069 seconds
+[0m19:40:56.398485 [debug] [Thread-1 (]: On model.dbt_scooters.book_scooter_retention: Close
+[0m19:40:56.400486 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20910718-6a7a-490b-a4b8-925731f1e2ce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8343217F0>]}
+[0m19:40:56.402254 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt.book_scooter_retention ................... [[32mSELECT 6[0m in 14.81s]
+[0m19:40:56.403292 [debug] [Thread-1 (]: Finished running node model.dbt_scooters.book_scooter_retention
+[0m19:40:56.405266 [info ] [MainThread]: 
+[0m19:40:56.406297 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:56.407272 [debug] [MainThread]: On master: BEGIN
+[0m19:40:56.407272 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:40:57.597445 [debug] [MainThread]: SQL status: BEGIN in 1.190 seconds
+[0m19:40:57.598439 [debug] [MainThread]: On master: COMMIT
+[0m19:40:57.599439 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:57.599439 [debug] [MainThread]: On master: COMMIT
+[0m19:40:57.670494 [debug] [MainThread]: SQL status: COMMIT in 0.071 seconds
+[0m19:40:57.674259 [debug] [MainThread]: Writing injected SQL for node "operation.dbt_scooters.dbt_scooters-on-run-end-0"
+[0m19:40:57.678271 [info ] [MainThread]: 1 of 1 START hook: dbt_scooters.on-run-end.0 ................................... [RUN]
+[0m19:40:57.680220 [debug] [MainThread]: Using postgres connection "master"
+[0m19:40:57.680220 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "dbt_scooters", "target_name": "dev", "connection_name": "master"} */
+grant usage on schema finance to finance;
+[0m19:40:57.757604 [debug] [MainThread]: SQL status: GRANT in 0.076 seconds
+[0m19:40:57.758642 [info ] [MainThread]: 1 of 1 OK hook: dbt_scooters.on-run-end.0 ...................................... [[32mOK[0m in 0.09s]
+[0m19:40:57.759602 [debug] [MainThread]: On master: Close
+[0m19:40:57.760602 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:40:57.760602 [debug] [MainThread]: Connection 'list_dev_gom1' was properly closed.
+[0m19:40:57.760602 [debug] [MainThread]: Connection 'list_dev_gom1_dbt' was properly closed.
+[0m19:40:57.762316 [debug] [MainThread]: Connection 'list_dev_gom1_finance' was properly closed.
+[0m19:40:57.762316 [debug] [MainThread]: Connection 'model.dbt_scooters.book_scooter_retention' was properly closed.
+[0m19:40:57.763366 [info ] [MainThread]: 
+[0m19:40:57.763366 [info ] [MainThread]: Finished running 1 project hook, 1 table model in 0 hours 0 minutes and 22.48 seconds (22.48s).
+[0m19:40:57.765329 [debug] [MainThread]: Command end result
+[0m19:40:57.820246 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\manifest.json
+[0m19:40:57.823548 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\semantic_manifest.json
+[0m19:40:57.830547 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\run_results.json
+[0m19:40:57.830547 [info ] [MainThread]: 
+[0m19:40:57.832269 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:40:57.833277 [info ] [MainThread]: 
+[0m19:40:57.834277 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m19:40:57.835281 [debug] [MainThread]: Command `dbt build` succeeded at 19:40:57.835281 after 25.21 seconds
+[0m19:40:57.836281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83424F7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D832B8B3E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D836561AC0>]}
+[0m19:40:57.836281 [debug] [MainThread]: Flushing usage events
+[0m19:40:58.562449 [debug] [MainThread]: An error was encountered while trying to flush usage events

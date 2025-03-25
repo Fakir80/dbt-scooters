@@ -191,6 +191,17 @@ models:
           It is needed for efficient incremental processing by engines
           with partitioning support (i.e. Trino).
 
+  - name: "events_stream"
+    description: "User events prepared for product analysis"
+    config:
+      materialized: "ephemeral"
+
+  - name: "book_scooter_retention"
+    description: >
+      Retention analysis which tells how many people
+      started search for scooter and finally booked it on or after
+      1, 7, 14 days (or weeks, months, years), etc
+
   - name: "events_clean_v2"
     description: "User events without duplicates"
     config:
