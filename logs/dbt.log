@@ -36685,3 +36685,252 @@ ORDER BY trip__started_at__day
 [0m14:41:36.080190 [debug] [MainThread]: SQL status: SELECT 91 in 0.884 seconds
 [0m14:41:36.084052 [debug] [MainThread]: On MetricFlow_request_mf_rid__7dn12nxd: ROLLBACK
 [0m14:41:36.168136 [debug] [MainThread]: On MetricFlow_request_mf_rid__7dn12nxd: Close
+[0m14:59:28.875360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D250AACE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D250AAE690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D250AAF650>]}
+
+
+============================== 14:59:28.882892 | d1e4b297-1d4d-4f58-b2ce-7a7f7fb0df16 ==============================
+[0m14:59:28.882892 [info ] [MainThread]: Running with dbt=1.9.2
+[0m14:59:28.884893 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt parse', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:29.250980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd1e4b297-1d4d-4f58-b2ce-7a7f7fb0df16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D250F82C30>]}
+[0m14:59:29.360720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd1e4b297-1d4d-4f58-b2ce-7a7f7fb0df16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24E2F2D50>]}
+[0m14:59:29.363163 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:59:29.773225 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m14:59:30.381033 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:59:30.382399 [debug] [MainThread]: Partial parsing: added file: dbt_scooters://models\metrics\scooters_metrics.yml
+[0m14:59:30.383399 [debug] [MainThread]: Partial parsing: updated file: dbt_scooters://models\metrics\trips_users_metrics.yml
+[0m14:59:30.691979 [warn ] [MainThread]: [[33mWARNING[0m]: Time spines without YAML configuration are in the process of
+deprecation. Please add YAML configuration for your 'metricflow_time_spine'
+model. See documentation on MetricFlow time spines:
+https://docs.getdbt.com/docs/build/metricflow-time-spine and behavior change
+documentation:
+https://docs.getdbt.com/reference/global-configs/behavior-changes.
+[0m14:59:30.692985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd1e4b297-1d4d-4f58-b2ce-7a7f7fb0df16', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2513D9CA0>]}
+[0m14:59:30.953202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd1e4b297-1d4d-4f58-b2ce-7a7f7fb0df16', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2514E8DD0>]}
+[0m14:59:30.960732 [info ] [MainThread]: Performance info: C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\perf_info.json
+[0m14:59:31.261949 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\manifest.json
+[0m14:59:31.270472 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\target\semantic_manifest.json
+[0m14:59:31.271483 [debug] [MainThread]: Command `dbt parse` succeeded at 14:59:31.271483 after 2.84 seconds
+[0m14:59:31.272784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24AD8D8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24AD8C0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24B0384D0>]}
+[0m14:59:31.273785 [debug] [MainThread]: Flushing usage events
+[0m14:59:31.993277 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:59:50.585323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6C6552E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6E767FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6E4DFCB0>]}
+
+
+============================== 14:59:50.590907 | ca329da9-c07e-492b-be73-aa65a8cc4ef1 ==============================
+[0m14:59:50.590907 [info ] [MainThread]: Running with dbt=1.9.2
+[0m14:59:50.591908 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'True', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt query --metrics trips_per_scooter --group-by scooter__company', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:50.616957 [info ] [MainThread]: dbt version: 1.9.2
+[0m14:59:50.617986 [info ] [MainThread]: python version: 3.12.4
+[0m14:59:50.617986 [info ] [MainThread]: python path: C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Scripts\python.exe
+[0m14:59:50.618990 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m14:59:50.726106 [info ] [MainThread]: Using profiles dir at C:\Users\Кирилл\.dbt
+[0m14:59:50.727653 [info ] [MainThread]: Using profiles.yml file at C:\Users\Кирилл\.dbt\profiles.yml
+[0m14:59:50.728667 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\dbt_project.yml
+[0m14:59:50.729701 [info ] [MainThread]: adapter type: postgres
+[0m14:59:50.730666 [info ] [MainThread]: adapter version: 1.9.0
+[0m14:59:50.894480 [info ] [MainThread]: Configuration:
+[0m14:59:50.894480 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:59:50.895498 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:59:50.896529 [info ] [MainThread]: Required dependencies:
+[0m14:59:50.896529 [debug] [MainThread]: Executing "git --help"
+[0m14:59:50.947636 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:59:50.948653 [debug] [MainThread]: STDERR: "b''"
+[0m14:59:50.949653 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:59:50.950654 [info ] [MainThread]: Connection:
+[0m14:59:50.950654 [info ] [MainThread]:   host: dpg-cve3bdt2ng1s73cctvfg-a.frankfurt-postgres.render.com
+[0m14:59:50.951959 [info ] [MainThread]:   port: 5432
+[0m14:59:50.951959 [info ] [MainThread]:   user: admin
+[0m14:59:50.952966 [info ] [MainThread]:   database: dev_gom1
+[0m14:59:50.952966 [info ] [MainThread]:   schema: dbt
+[0m14:59:50.953966 [info ] [MainThread]:   connect_timeout: 10
+[0m14:59:50.954966 [info ] [MainThread]:   role: None
+[0m14:59:50.954966 [info ] [MainThread]:   search_path: None
+[0m14:59:50.955965 [info ] [MainThread]:   keepalives_idle: 0
+[0m14:59:50.955965 [info ] [MainThread]:   sslmode: None
+[0m14:59:50.956966 [info ] [MainThread]:   sslcert: None
+[0m14:59:50.957966 [info ] [MainThread]:   sslkey: None
+[0m14:59:50.957966 [info ] [MainThread]:   sslrootcert: None
+[0m14:59:50.958967 [info ] [MainThread]:   application_name: dbt
+[0m14:59:50.958967 [info ] [MainThread]:   retries: 1
+[0m14:59:50.960959 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:59:51.406798 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m14:59:51.532875 [debug] [MainThread]: Using postgres connection "debug"
+[0m14:59:51.533877 [debug] [MainThread]: On debug: select 1 as id
+[0m14:59:51.534874 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:59:53.596345 [debug] [MainThread]: SQL status: SELECT 1 in 2.061 seconds
+[0m14:59:53.597894 [debug] [MainThread]: On debug: Close
+[0m14:59:53.597894 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:59:53.598938 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:59:53.599938 [debug] [MainThread]: Command `cli debug` succeeded at 14:59:53.599938 after 3.16 seconds
+[0m14:59:53.599938 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:59:53.600937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6F509F70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6F50A3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF6F732960>]}
+[0m14:59:53.600937 [debug] [MainThread]: Flushing usage events
+[0m14:59:54.180863 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:59:54.284787 [debug] [MainThread]: Acquiring new postgres connection 'MetricFlow_request_mf_rid__ncwfv8ad'
+[0m14:59:54.285787 [debug] [MainThread]: Using postgres connection "MetricFlow_request_mf_rid__ncwfv8ad"
+[0m14:59:54.285787 [debug] [MainThread]: On MetricFlow_request_mf_rid__ncwfv8ad: BEGIN
+[0m14:59:54.286789 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:59:55.601586 [debug] [MainThread]: SQL status: BEGIN in 1.315 seconds
+[0m14:59:55.602786 [debug] [MainThread]: Using postgres connection "MetricFlow_request_mf_rid__ncwfv8ad"
+[0m14:59:55.602786 [debug] [MainThread]: On MetricFlow_request_mf_rid__ncwfv8ad: -- Compute Metrics via Expressions
+WITH sma_10001_cte AS (
+  -- Read Elements From Semantic Model 'scooters_metrics'
+  -- Metric Time Dimension 'actual_at'
+  SELECT
+    hardware_id AS scooter
+    , company
+    , company AS scooter__company
+    , scooters AS scooters_count
+  FROM "dev_gom1"."dbt"."scooters" scooters_metrics_src_10000
+)
+
+SELECT
+  scooter__company AS scooter__company
+  , CAST(trips_count AS DOUBLE PRECISION) / CAST(NULLIF(scooters_count, 0) AS DOUBLE PRECISION) AS trips_per_scooter
+FROM (
+  -- Combine Aggregated Outputs
+  SELECT
+    COALESCE(subq_8.scooter__company, subq_12.scooter__company) AS scooter__company
+    , MAX(subq_8.trips_count) AS trips_count
+    , MAX(subq_12.scooters_count) AS scooters_count
+  FROM (
+    -- Join Standard Outputs
+    -- Pass Only Elements: ['trips_count', 'scooter__company']
+    -- Aggregate Measures
+    -- Compute Metrics via Expressions
+    SELECT
+      sma_10001_cte.company AS scooter__company
+      , SUM(subq_1.trips_count) AS trips_count
+    FROM (
+      -- Read Elements From Semantic Model 'trips_users_metrics'
+      -- Metric Time Dimension 'started_at'
+      SELECT
+        scooter_hw_id AS scooter
+        , 1 AS trips_count
+      FROM "dev_gom1"."dbt"."trips_users" trips_users_metrics_src_10000
+    ) subq_1
+    LEFT OUTER JOIN
+      sma_10001_cte sma_10001_cte
+    ON
+      subq_1.scooter = sma_10001_cte.scooter
+    GROUP BY
+      sma_10001_cte.company
+  ) subq_8
+  FULL OUTER JOIN (
+    -- Read From CTE For node_id=sma_10001
+    -- Pass Only Elements: ['scooters_count', 'scooter__company']
+    -- Aggregate Measures
+    -- Compute Metrics via Expressions
+    SELECT
+      scooter__company
+      , SUM(scooters_count) AS scooters_count
+    FROM sma_10001_cte sma_10001_cte
+    GROUP BY
+      scooter__company
+  ) subq_12
+  ON
+    subq_8.scooter__company = subq_12.scooter__company
+  GROUP BY
+    COALESCE(subq_8.scooter__company, subq_12.scooter__company)
+) subq_13
+[0m14:59:56.166176 [debug] [MainThread]: SQL status: SELECT 6 in 0.563 seconds
+[0m14:59:56.168774 [debug] [MainThread]: On MetricFlow_request_mf_rid__ncwfv8ad: ROLLBACK
+[0m14:59:56.234214 [debug] [MainThread]: On MetricFlow_request_mf_rid__ncwfv8ad: Close
+[0m15:00:16.518705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E40A4380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E40A5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E40A7DA0>]}
+
+
+============================== 15:00:16.524039 | e9701ef3-b506-4a2c-ba72-a9cf601161ec ==============================
+[0m15:00:16.524039 [info ] [MainThread]: Running with dbt=1.9.2
+[0m15:00:16.525040 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Кирилл\\PycharmProjects\\dbtexample\\dbt_scooters\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Кирилл\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': "dbt query --metrics trips_count --group-by scooter__model --order -trips_count --where {{Dimension('trip__sex')}}='M'", 'send_anonymous_usage_stats': 'True'}
+[0m15:00:16.550827 [info ] [MainThread]: dbt version: 1.9.2
+[0m15:00:16.550827 [info ] [MainThread]: python version: 3.12.4
+[0m15:00:16.551797 [info ] [MainThread]: python path: C:\Users\Кирилл\AppData\Local\pypoetry\Cache\virtualenvs\pythonproject1-kC7AKq2D-py3.12\Scripts\python.exe
+[0m15:00:16.551797 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m15:00:16.656076 [info ] [MainThread]: Using profiles dir at C:\Users\Кирилл\.dbt
+[0m15:00:16.657624 [info ] [MainThread]: Using profiles.yml file at C:\Users\Кирилл\.dbt\profiles.yml
+[0m15:00:16.658670 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Кирилл\PycharmProjects\dbtexample\dbt_scooters\dbt_project.yml
+[0m15:00:16.659635 [info ] [MainThread]: adapter type: postgres
+[0m15:00:16.660671 [info ] [MainThread]: adapter version: 1.9.0
+[0m15:00:16.825068 [info ] [MainThread]: Configuration:
+[0m15:00:16.826070 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:00:16.826070 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:00:16.827617 [info ] [MainThread]: Required dependencies:
+[0m15:00:16.827617 [debug] [MainThread]: Executing "git --help"
+[0m15:00:16.875811 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:00:16.876774 [debug] [MainThread]: STDERR: "b''"
+[0m15:00:16.877811 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:00:16.877811 [info ] [MainThread]: Connection:
+[0m15:00:16.878777 [info ] [MainThread]:   host: dpg-cve3bdt2ng1s73cctvfg-a.frankfurt-postgres.render.com
+[0m15:00:16.879811 [info ] [MainThread]:   port: 5432
+[0m15:00:16.879811 [info ] [MainThread]:   user: admin
+[0m15:00:16.880819 [info ] [MainThread]:   database: dev_gom1
+[0m15:00:16.880819 [info ] [MainThread]:   schema: dbt
+[0m15:00:16.882079 [info ] [MainThread]:   connect_timeout: 10
+[0m15:00:16.882079 [info ] [MainThread]:   role: None
+[0m15:00:16.883080 [info ] [MainThread]:   search_path: None
+[0m15:00:16.883080 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:00:16.884044 [info ] [MainThread]:   sslmode: None
+[0m15:00:16.885071 [info ] [MainThread]:   sslcert: None
+[0m15:00:16.885071 [info ] [MainThread]:   sslkey: None
+[0m15:00:16.886079 [info ] [MainThread]:   sslrootcert: None
+[0m15:00:16.886079 [info ] [MainThread]:   application_name: dbt
+[0m15:00:16.886079 [info ] [MainThread]:   retries: 1
+[0m15:00:16.887625 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m15:00:17.303988 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:00:17.426455 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:00:17.426455 [debug] [MainThread]: On debug: select 1 as id
+[0m15:00:17.427456 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:00:18.527811 [debug] [MainThread]: SQL status: SELECT 1 in 1.100 seconds
+[0m15:00:18.528815 [debug] [MainThread]: On debug: Close
+[0m15:00:18.529814 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:00:18.530769 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:00:18.532068 [debug] [MainThread]: Command `cli debug` succeeded at 15:00:18.530769 after 2.15 seconds
+[0m15:00:18.532068 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:00:18.533070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E4330830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E4B39430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5E40E3A70>]}
+[0m15:00:18.533070 [debug] [MainThread]: Flushing usage events
+[0m15:00:19.150869 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:00:19.269723 [debug] [MainThread]: Acquiring new postgres connection 'MetricFlow_request_mf_rid__zlzbcfok'
+[0m15:00:19.270724 [debug] [MainThread]: Using postgres connection "MetricFlow_request_mf_rid__zlzbcfok"
+[0m15:00:19.270724 [debug] [MainThread]: On MetricFlow_request_mf_rid__zlzbcfok: BEGIN
+[0m15:00:19.271723 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:00:22.017448 [debug] [MainThread]: SQL status: BEGIN in 2.746 seconds
+[0m15:00:22.018457 [debug] [MainThread]: Using postgres connection "MetricFlow_request_mf_rid__zlzbcfok"
+[0m15:00:22.018457 [debug] [MainThread]: On MetricFlow_request_mf_rid__zlzbcfok: -- Constrain Output with WHERE
+-- Pass Only Elements: ['trips_count', 'scooter__model']
+-- Aggregate Measures
+-- Compute Metrics via Expressions
+-- Order By ['trips_count']
+SELECT
+  scooter__model
+  , SUM(trips_count) AS trips_count
+FROM (
+  -- Join Standard Outputs
+  SELECT
+    scooters_metrics_src_10000.model AS scooter__model
+    , subq_1.trip__sex AS trip__sex
+    , subq_1.trips_count AS trips_count
+  FROM (
+    -- Read Elements From Semantic Model 'trips_users_metrics'
+    -- Metric Time Dimension 'started_at'
+    SELECT
+      scooter_hw_id AS scooter
+      , sex AS trip__sex
+      , 1 AS trips_count
+    FROM "dev_gom1"."dbt"."trips_users" trips_users_metrics_src_10000
+  ) subq_1
+  LEFT OUTER JOIN
+    "dev_gom1"."dbt"."scooters" scooters_metrics_src_10000
+  ON
+    subq_1.scooter = scooters_metrics_src_10000.hardware_id
+) subq_5
+WHERE trip__sex='M'
+GROUP BY
+  scooter__model
+ORDER BY trips_count DESC
+[0m15:00:22.550835 [debug] [MainThread]: SQL status: SELECT 10 in 0.531 seconds
+[0m15:00:22.552109 [debug] [MainThread]: On MetricFlow_request_mf_rid__zlzbcfok: ROLLBACK
+[0m15:00:22.620438 [debug] [MainThread]: On MetricFlow_request_mf_rid__zlzbcfok: Close
