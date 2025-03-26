@@ -6,10 +6,12 @@ authors = ["Kirill <fka@mail.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<3.13"
 dbt-core = "^1.8.8"
 dbt-postgres = "^1.8.2"
 graphviz = "^0.20.3"
+dbt-metricflow = "^0.8.1"
+
 
 
 [build-system]

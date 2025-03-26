@@ -226,3 +226,6 @@ models:
         data_tests:
           - "dbt_utils.not_constant"
 
+  - name: "metricflow_time_spine"
+    description: "Time spine calendar for metricflow"
+

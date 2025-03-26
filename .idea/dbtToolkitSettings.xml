@@ -73,6 +73,11 @@
             <Object />
           </value>
         </entry>
+        <entry key="vars">
+          <value>
+            <Object />
+          </value>
+        </entry>
         <entry key="version">
           <value>
             <Object />
@@ -95,6 +100,7 @@
     </option>
     <option name="dbtVersionMajor" value="1" />
     <option name="dbtVersionMinor" value="8" />
+    <option name="initialSettingsAreSet" value="true" />
     <option name="settingsDbtProjectDir" value="$PROJECT_DIR$" />
     <option name="settingsDbtTargetDir" value="$PROJECT_DIR$/target" />
   </component>
