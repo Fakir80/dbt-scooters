@@ -3,10 +3,10 @@ with prep_daily_trips_cte as (
 morning_trips - количество утренних поездок */
     select
         user_id,
+        "date",
         st_snaptogrid(
             st_makepoint(finish_lon, finish_lat), 0.001
         ) as destination,
-        "date",
         count(case
             when
                 extract(
