@@ -92,3 +92,13 @@ macros:
       - name: "node"
         type: "node"
         description: "dbt node to generate schema name for (not in use)"
+
+  - name: "trips_age_sex_report"
+    description: "Compute trips statistics in time by age and gender of user"
+    arguments:
+      - name: "trips_table"
+        type: "string"
+        description: "Table with source trips data enriched with user data"
+      - name: "granularity"
+        type: "string"
+        description: "Time granularity for report (daily/weekly/monthly)"
