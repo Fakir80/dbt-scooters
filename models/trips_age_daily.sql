@@ -1,9 +1,10 @@
-Select "date",
-       age,
-       count(*) as trips,
-       sum(price_rub) as revenue_rub
-from
+Select
+    "date",
+    age,
+    count(*) As trips,
+    sum(price_rub) As revenue_rub
+From
     {{ ref("trips_users") }}
-group by
+Group By
     1,
     2

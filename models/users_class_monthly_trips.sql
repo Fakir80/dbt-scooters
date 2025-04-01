@@ -1,4 +1,4 @@
-with prep_monthly_trips as(
+with prep_monthly_trips as (
     /* Для каждого пользователя находим месячную статистику поездок:
       trips_per_month - количество поездок в месяц */
     select

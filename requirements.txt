@@ -1,3 +1,4 @@
 dbt-core
 dbt-postgres
 dbt-metricflow
+sqlfluff-templater-dbt==3.3.0
