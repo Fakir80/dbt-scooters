@@ -2,7 +2,7 @@ name: 🚀 Deploy dbt project to production with Data Catalog
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
   contents: write
